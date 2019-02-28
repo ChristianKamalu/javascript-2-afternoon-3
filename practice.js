@@ -119,10 +119,9 @@ contains(names, 'Colt', function(result){
 
 function uniq (arr, cb) {
   for(let i = 0; i < arr.length; i++) {
-    for(let k = 0; k < arr.length; k++) {
+    for(let k = i + 1; k < arr.length; k++) {
       if(arr[i] === arr[k]) {
         arr.splice(k, 1);
-        console.log(arr)
       }
     }
   }cb(arr);
